@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Predefined global functions Continuing</title>
+</head>
+<body>
+
+    Example #1
+    {{range .}}
+            {{.}}
+     {{end}}
+
+    Example #2
+    {{if .}}
+            {{.}}
+    {{end}}
+
+    Example #3
+    {{range .}}
+            {{if .First}}
+                    {{.First}}
+            {{end}}
+    {{end}}
+
+    Example #4
+    {{range .}}
+        {{if and .First .Admin}}
+            {{.First}}
+            {{.Age}}
+            {{.Admin}}
+        {{end}}
+    {{end}}
+</body>
+</html>
