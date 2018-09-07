@@ -8,12 +8,24 @@ import (
 
 var tpl *template.Template
 
+type members struct {
+	First string
+	Last  string
+}
+
 func init() {
 	tpl = template.Must(template.ParseFiles("tpl.gohtml"))
 }
 
 func main() {
-	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", 48)
+
+	mustafa := members{
+		First: "Mustafa",
+		Last:  "Katipoğlu",
+	}
+
+	err := tpl.Execute(os.Stdout, mustafa)
+
 	if err != nil {
 		log.Fatalln(err)
 	}

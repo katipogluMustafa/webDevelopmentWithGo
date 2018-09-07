@@ -13,7 +13,9 @@ func init() {
 }
 
 func main() {
-	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", 48)
+	members := []string{"Mustafa", "Ahmet", "Yusuf", "Alperen", "Fatih", "Mert"}
+	err := tpl.Execute(os.Stdout, members)
+
 	if err != nil {
 		log.Fatalln(err)
 	}

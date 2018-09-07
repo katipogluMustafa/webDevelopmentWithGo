@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Stuct - Slice - Struct</title>
+</head>
+<body>
+    <ul>
+        {{range .Group}}
+            <li>{{.First}} - {{.Age}}</li>
+        {{end}}
+    </ul>
+    <ul>
+        {{range .Transport}}
+            <li>{{.Manufacturer}} - {{.Model}} - {{.Doors}}</li>
+        {{end}}
+    </ul>
+</body>
+</html>

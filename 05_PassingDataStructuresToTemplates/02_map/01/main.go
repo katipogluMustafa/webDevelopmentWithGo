@@ -13,7 +13,15 @@ func init() {
 }
 
 func main() {
-	err := tpl.ExecuteTemplate(os.Stdout, "tpl.gohtml", 48)
+	members := map[string]string{
+		"asdas": " sdasda",
+		"asdad": " sdasda",
+		"asdaf": " sdasda",
+		"asdag": " sdasda",
+		"asdah": " sdasda",
+	}
+
+	err := tpl.Execute(os.Stdout, members)
 	if err != nil {
 		log.Fatalln(err)
 	}
