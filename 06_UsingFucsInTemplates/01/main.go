@@ -28,6 +28,7 @@ var fm = template.FuncMap{
 	"ft": firstThree,
 }
 
+//.New() method is used because if you use Parse(str string) method instead of ParseFiles, you need to name the template in order to execute it with tpl.ExecuteTemplate()
 func init() {
 	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("tpl.gohtml"))
 }
